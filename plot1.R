@@ -14,11 +14,10 @@ rm(hpc)
 df_hpc$Global_active_power<-as.numeric(df_hpc$Global_active_power)
 
 ##make a histogram 
+png(filename = "Plot1.png", width = 480, height = 480)
 hist(df_hpc$Global_active_power, col="red", 
      xlab = "Global Active Power (kilowatts)",
      main = "Global Active Power")
-##Copy the graph in the graphic device onto png file
-dev.copy(png, file = "Plot1.png")
 
 #close the graphic device
 dev.off()

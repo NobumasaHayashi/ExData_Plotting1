@@ -14,12 +14,11 @@ rm(hpc)
 #convert the data from character to numeric
 df_hpc$Global_active_power<-as.numeric(df_hpc$Global_active_power)
 
+png(filename = "Plot2.png", width = 480, height = 480)
 par(mar=c(3,4,4,2))
 with(df_hpc, plot(Time, Global_active_power, type="l",
                   ylab = "Global Active Power (killowatts)"))
 
-##Copy the graph in the graphic device onto png file
-dev.copy(png, file = "Plot2.png")
 
 #close the graphic device
 dev.off()
