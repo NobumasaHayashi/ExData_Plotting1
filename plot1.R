@@ -20,4 +20,5 @@ hist(df_hpc$Global_active_power, col="red",
      main = "Global Active Power")
 
 #close the graphic device
+##sampleadd
 dev.off()
